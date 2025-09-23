@@ -17,20 +17,7 @@ after that, there are optional parameters you can specify
 - -nogit | skips the creation of a git local repo
 - -norspec | skips the initialisation of rspec
 - -dotenv | adds dotenv to the project
+- -als | adds an alias with the name "mkrb" in .bashrc
+    - Be sure to launch it from the bin directory
 
-I personally added it to the mkrub alias
-
-## Google Search
-
-This program was a simple test to use the launchy gem
-
-allows to make a google search from the terminal using "GoogleSearch.rb your research string"
-
-You can add this program as an alias to use it from anywhere
-
-workaround for being able to open a link with GoogleSearch.rb directly into windows from WSL
-
-type following command in terminal
-
-`export BROWSER='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'`
-
+I personally added it to the mkrb alias

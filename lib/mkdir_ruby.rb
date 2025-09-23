@@ -14,6 +14,9 @@ def verify_command_argument
         puts "Folder already exists".colorize(31)
     elsif ARGV.include?("-help") || ARGV.include?("-h")
         show_help
+    elsif ARGV.include?("-als")
+        system "echo \"alias mkrb='ruby #{Dir.pwd}/mkdir_ruby.rb'\" >> ~/.bashrc"
+        system "source ~/.bashrc"
     else #Si la commande est bonne et contient un nom de projet
         start_creation
     end
