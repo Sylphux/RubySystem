@@ -14,9 +14,6 @@ def verify_command_argument
         puts "Folder already exists".colorize(31)
     elsif ARGV.include?("-help") || ARGV.include?("-h")
         show_help
-    elsif ARGV.include?("-als")
-        system "echo \"alias mkrb='ruby #{Dir.pwd}/mkdir_ruby.rb'\" >> ~/.bashrc"
-        system "source ~/.bashrc"
     else #Si la commande est bonne et contient un nom de projet
         start_creation
     end
@@ -63,6 +60,11 @@ def start_creation #crée la structure du projet ruby
     # verifies if we want to create .env en voyant si l'array contient -dotenv
     if ARGV.include? "-dotenv"
         add_dotenv
+    end
+    if  ARGV.include?("-als")
+        system "echo \"alias mkrb='ruby #{Dir.pwd}/mkdir_ruby.rb'\" >> ~/.bashrc"
+        system "source ~/.bashrc"
+        puts "Alias created".colorize(32)
     end
     puts
     puts "Ruby project created !".colorize(32)
