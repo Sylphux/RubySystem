@@ -19,5 +19,3 @@ after that, there are optional parameters you can specify
 - -dotenv | adds dotenv to the project
 - -als | adds an alias with the name "mkrb" in .bashrc
     - Be sure to launch it from the bin directory
-
-I personally added it to the mkrb alias
